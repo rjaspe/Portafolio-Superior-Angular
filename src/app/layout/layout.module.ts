@@ -25,4 +25,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   providers: [],
   bootstrap: [HomeComponent]
 })
-export class LayoutModule { }
+export class LayoutModule {
+  pageTitle: string;
+}
