@@ -7,6 +7,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
     TopbarComponent,
     SearchComponent,
     ProfileComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule
