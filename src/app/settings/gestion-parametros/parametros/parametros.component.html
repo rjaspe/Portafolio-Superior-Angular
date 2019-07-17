@@ -1,0 +1,32 @@
+<div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button"
+        aria-expanded="true" aria-controls="collapseCardExample">
+        <h6 class="m-0 font-weight-bold text-primary">Filtros de búsqueda</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseCardExample">
+        <div class="card-body">
+            <app-parametros-buscar (notificarBuscarParametros)="buscarParametros($event)" [estadosParametro]="estadosParametro"></app-parametros-buscar>
+        </div>
+    </div>
+</div>
+<!-- Default Card Example -->
+<div class="card mb-4">
+    <div class="card-header text-primary">
+        Listado de parámetros
+    </div>
+    <div class="card-body">
+        <app-parametros-list></app-parametros-list>
+    </div>
+</div>
+
+<!-- Default Card Example -->
+<div class="card mb-4">
+    <div class="card-header font-weight-bold text-primary">
+        Gestionar Parámetro
+    </div>
+    <div class="card-body">
+        <app-parametro-gestionar></app-parametro-gestionar>
+    </div>
+</div>
