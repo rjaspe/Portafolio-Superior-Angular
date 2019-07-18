@@ -10,23 +10,32 @@ export class ParametrosBuscarComponent implements OnInit {
   constructor() { }
 
   @Output() notificarBuscarParametros: EventEmitter<any> = new EventEmitter<any>();
+  @Output() ajustarInterfazParametros: EventEmitter<any> = new EventEmitter<any>();
 
-  //Recuperar Estados dinámicamente. (implementar Servicios)
   @Input() estadosParametro;
 
-  filtrosBusqueda = { nombre: null, modulo: null, estado: null };
+  filtrosBusqueda = { nombre: null, estado: null };
 
+  //#region [Hooks]
   ngOnInit() {
   }
+  //#endregion
 
+  //#region [Methods]
   reiniciarControles(): void {
     this.filtrosBusqueda.nombre = null;
-    this.filtrosBusqueda.modulo = null;
     this.filtrosBusqueda.estado = null;
+
+    this.buscarParametros();
   }
 
   buscarParametros(): void {
-    console.log("buscarParametros-ParametrosBuscarComponent")
+    this.ajustarInterfazParametros.emit({ editando: false })
     this.notificarBuscarParametros.emit(this.filtrosBusqueda);
   }
+
+  crearParametro(): void {
+    this.ajustarInterfazParametros.emit({ editando: true })
+  }
+  //#endregion
 }

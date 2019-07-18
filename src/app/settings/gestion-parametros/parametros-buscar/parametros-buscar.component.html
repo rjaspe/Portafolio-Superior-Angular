@@ -1,16 +1,9 @@
 <div class="row">
-    <div class="col">
+    <div class="col-8">
         <div class="form-group">
             <label for="filtroNombre">Nombre Parámetro</label>
             <input type="text" class="form-control" id="filtroNombre" placeholder="Nombre"
                 [(ngModel)]="filtrosBusqueda.nombre">
-        </div>
-    </div>
-    <div class="col">
-        <div class="form-group">
-            <label for="filtroModulo">Módulo</label>
-            <input type="text" class="form-control" id="filtroModulo" placeholder="Módulo"
-                [(ngModel)]="filtrosBusqueda.modulo">
         </div>
     </div>
     <div class="col">
@@ -26,7 +19,7 @@
 </div>
 <div class="row">
     <div class="col">
-        <button type="button" class="btn btn-warning float-left">Nuevo</button>
+        <button type="button" class="btn btn-warning float-left" (click)="crearParametro()">Nuevo</button>
         <div class="btn-group float-right" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-secondary" (click)="reiniciarControles()">Reiniciar filtros</button>
             <button type="button" class="btn btn-primary" (click)="buscarParametros()">Buscar</button>
